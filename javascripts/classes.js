@@ -69,7 +69,7 @@ Gauntlet.GuildHall.Monk.prototype = new Gauntlet.GuildHall.Fighter();
     MAGICAL CLASSES
       - Shaman
       - Wizard
-      - Conujurer
+      - Conjurer
       - Sorcerer
  */
 Gauntlet.GuildHall.Mage = function() {
@@ -122,5 +122,6 @@ Gauntlet.GuildHall.Sorcerer.prototype = new Gauntlet.GuildHall.Mage();
       - Thief
       - Ninja
       - Assassin
+      - Hunter
  */
 
