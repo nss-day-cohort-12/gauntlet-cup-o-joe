@@ -1,18 +1,23 @@
 "use strict";
 
 let Gauntlet = Gauntlet || {};
-Gauntlet.Enemies = {};
+Gauntlet.Opponents = {};
 
-Gauntlet.Combatants.Monster = function() {
+/*
+  Define the base properties for a monster in a 
+  constructor function.
+ */
+
+Gauntlet.Opponents.Monster = function() {
   this.health = this.health - 30;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
 };
 
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+Gauntlet.Opponents.Monster.prototype = new Gauntlet.Opponents.Player();
 
 // ORC
-Gauntlet.Combatants.Orc = function() {
+Gauntlet.Opponents.Orc = function() {
   this.health = this.health + 20;
   this.species = "Orc";
   this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
@@ -30,10 +35,10 @@ Gauntlet.Combatants.Orc = function() {
   }
 };
 
-Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Monster();
+Gauntlet.Opponents.Orc.prototype = new Gauntlet.Opponents.Monster();
 
 // DARK ELF
-Gauntlet.Combatants.DarkElf = function() {
+Gauntlet.Opponents.DarkElf = function() {
   this.health = this.health + 30;
   this.species = "Dark Elf";
   // *** this.allowedClasses = ["Warrior", "Berserker", "Shaman"]; ***
@@ -51,10 +56,10 @@ Gauntlet.Combatants.DarkElf = function() {
   }
 };
 
-Gauntlet.Combatants.DarkElf.prototype = new Gauntlet.Combatants.Monster();
+Gauntlet.Opponents.DarkElf.prototype = new Gauntlet.Opponents.Monster();
 
-// 
-Gauntlet.Combatants.DarkMage = function() {
+// DARK MAGE
+Gauntlet.Opponents.DarkMage = function() {
   this.health = this.health + 20;
   this.species = "DarkMage";
   // *** this.allowedClasses = ["Warrior", "Berserker", "Shaman"]; ***
@@ -72,6 +77,6 @@ Gauntlet.Combatants.DarkMage = function() {
   }
 };
 
-Gauntlet.Combatants.DarkMage.prototype = new Gauntlet.Combatants.Monster();
+Gauntlet.Opponents.DarkMage.prototype = new Gauntlet.Opponents.Monster();
 
 // module.exports = Gauntlet;

@@ -79,10 +79,4 @@ Gauntlet.Combatants.Human = function() {
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
-
-/*
-  Define the base properties for a monster in a 
-  constructor function.
- */
-
 // module.exports = Gauntlet;
