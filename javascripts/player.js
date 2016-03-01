@@ -3,7 +3,7 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
+let Gauntlet = Gauntlet || {};
 Gauntlet.Combatants = {};
 
 /*
@@ -24,7 +24,7 @@ Gauntlet.Combatants.Player = function(name) {
   this.intelligence = 90;
 
   this.toString = function() {
-    var output = [this.playerName,
+    let output = [this.playerName,
       ": a ",
       this.skinColor,
       " skinned ",
@@ -48,10 +48,10 @@ Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
 
 Gauntlet.Combatants.Player.prototype.generateClass = function() {
   // Get a random index from the allowed classes array
-  var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+  let random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
   // Get the string at the index
-  var randomClass = this.allowedClasses[random];
+  let randomClass = this.allowedClasses[random];
 
   // Composes the corresponding player class into the player object
   this.class = new Gauntlet.GuildHall[randomClass]();
@@ -66,7 +66,7 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   constructor function.
  */
 Gauntlet.Combatants.Human = function() {
-  var randomSkin;
+  let randomSkin;
 
   this.species = "Human";
   this.intelligence = this.intelligence + 20;
@@ -79,17 +79,4 @@ Gauntlet.Combatants.Human = function() {
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
-
-/*
-  Define the base properties for a monster in a 
-  constructor function.
- */
-Gauntlet.Combatants.Monster = function() {
-  this.health = this.health - 30;
-  this.intelligence = this.intelligence -20;
-  this.strength = this.strength + 30;
-};
-
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
-
-module.exports = player;
+// module.exports = Gauntlet;

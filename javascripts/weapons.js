@@ -1,5 +1,10 @@
+"use strict";
+
+let Gauntlet = Gauntlet || {};
+Gauntlet.Armory = {};
+
 // WEAPON PROTOTYPE CONSTRUCTOR
-var Weapon = function() {
+let Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
   this.hands = 2;
@@ -11,7 +16,7 @@ var Weapon = function() {
 
 // WARRIOR CLASS WEAPONS
     // BROADSWORD
-    var BroadSword = function() {
+    let BroadSword = function() {
       this.name = "broad sword";
       this.damage = 14;
       this.hands = 2;
@@ -19,7 +24,7 @@ var Weapon = function() {
     BroadSword.prototype = new Weapon();
 
     // WARAXE
-    var WarAxe = function() {
+    let WarAxe = function() {
       this.name = "war axe";
       this.damage = 18;
       this.hands = 2;
@@ -27,7 +32,7 @@ var Weapon = function() {
     WarAxe.prototype = new Weapon();
 
     // CLAYMORE
-    var Claymore = function() {
+    let Claymore = function() {
       this.name = "Claymore";
       this.damage = 15;
       this.hands = 2;
@@ -44,7 +49,7 @@ var Weapon = function() {
     BowAndArrow.prototype = new Weapon();
 
     // DAGGER
-    var Dagger = function() {
+    let Dagger = function() {
       this.name = "dagger";
       this.damage = 4;
       this.hands = 1;
@@ -52,11 +57,11 @@ var Weapon = function() {
     Dagger.prototype = new Weapon();
 
     // KATANA
-    var Katana = function() {
+    let Katana = function() {
       this.name = "katana";
       this.damage = 12;
       this.hands = 2;
     }
     Katana.prototype = new Weapon();
 
-    module.exports = weapons;
+// module.exports = WeaponsPage;

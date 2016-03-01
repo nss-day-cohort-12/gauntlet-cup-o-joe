@@ -1,7 +1,9 @@
+"use strict";
+
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
+let Gauntlet = Gauntlet || {};
 Gauntlet.GuildHall = {};
 
 /*
@@ -26,6 +28,8 @@ Gauntlet.GuildHall.PlayerClass = function() {
       - Berserker
       - Monk
  */
+
+// FIGHTER PROTOTYPE CONSTRUCTOR
 Gauntlet.GuildHall.Fighter = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
@@ -72,6 +76,7 @@ Gauntlet.GuildHall.Monk.prototype = new Gauntlet.GuildHall.Fighter();
       - Conjurer
       - Sorcerer
  */
+// MAGE PROTOTYPE CONSTRUCTOR
 Gauntlet.GuildHall.Mage = function() {
   this.name = "Mage";
   this.magical = true;
@@ -125,4 +130,48 @@ Gauntlet.GuildHall.Sorcerer.prototype = new Gauntlet.GuildHall.Mage();
       - Hunter
  */
 
-module.exports = classes;
+// STEALTH PROTOTYPE CONSTRUCTOR
+Gauntlet.GuildHall.Stealth = function() {
+  this.name = "Stealth";
+  this.healthBonus = this.healthBonus - 10;
+  this.strengthBonus = this.strengthBonus - 20;
+  // this.speedBonus = this.intelligenceBonus + 20;
+};
+Gauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();
+
+
+Gauntlet.GuildHall.Thief = function() {
+  this.name = "Thief";
+  this.healthBonus = this.healthBonus + 5;
+  this.strengthBonus = this.strengthBonus - 10;
+  // this.speedBonus = this.intelligenceBonus + 20;
+};
+Gauntlet.GuildHall.Thief.prototype = new Gauntlet.GuildHall.Stealth();
+
+
+Gauntlet.GuildHall.Ninja = function() {
+  this.name = "Ninja";
+  this.healthBonus = this.healthBonus - 15;
+  this.strengthBonus = this.strengthBonus - 25;
+  // this.speedBonus = this.intelligenceBonus + 40;
+};
+Gauntlet.GuildHall.Ninja.prototype = new Gauntlet.GuildHall.Stealth();
+
+
+Gauntlet.GuildHall.Assassin = function() {
+  this.name = "Assassin";
+  this.strengthBonus = this.strengthBonus - 10;
+  // this.speedBonus = this.intelligenceBonus + 10;
+};
+Gauntlet.GuildHall.Assasin.prototype = new Gauntlet.GuildHall.Stealth();
+
+
+Gauntlet.GuildHall.Hunter = function() {
+  this.name = "Hunter";
+  this.healthBonus = this.healthBonus - 5;
+  this.strengthBonus = this.strengthBonus - 20;
+  // this.speedBonus = this.intelligenceBonus + 30;
+};
+Gauntlet.GuildHall.Hunter.prototype = new Gauntlet.GuildHall.Stealth();
+
+// module.exports = Gauntlet;

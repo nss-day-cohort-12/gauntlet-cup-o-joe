@@ -1,9 +1,10 @@
+"use strict";
+
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
+let Gauntlet = Gauntlet || {};
 Gauntlet.SpellBook = {};
-
 
 /*
   Base spell function that defines name, damage, damage type
@@ -21,39 +22,15 @@ Gauntlet.SpellBook.Spell = function() {
 };
 
 /*
-  An elemental water sphere that can be cast by a magical class
+  An elemental sphere that can be cast by a magical class
  */
-Gauntlet.SpellBook.WaterSphere = function() {
-  this.name = "water sphere";
+Gauntlet.SpellBook.Sphere = function() {
+  this.name = "sphere";
   this.damage = Math.floor(Math.random() * 10 + 10);
 
-  var random = Math.round(Math.random() * (this.damageTypes.length - 1));
+  let random = Math.round(Math.random() * (this.damageTypes.length - 1));
   this.type = this.damageTypes[random];
 };
-Gauntlet.SpellBook.WaterSphere.prototype = new Gauntlet.SpellBook.Spell();
+Gauntlet.SpellBook.Sphere.prototype = new Gauntlet.SpellBook.Spell();
 
-/*
-  An elemental thunderbolt that can be cast by a magical class
- */
-Gauntlet.SpellBook.ThunderBolt = function() {
-  this.name = "thunder bolt";
-  this.damage = Math.floor(Math.random() * 10 + 10);
-
-  var random = Math.round(Math.random() * (this.damageTypes.length - 1));
-  this.type = this.damageTypes[random];
-};
-Gauntlet.SpellBook.ThunderBolt.prototype = new Gauntlet.SpellBook.Spell();
-
-/*
-  An elemental thunderbolt that can be cast by a magical class
- */
-Gauntlet.SpellBook.FireStream = function() {
-  this.name = "fire stream";
-  this.damage = Math.floor(Math.random() * 10 + 10);
-
-  var random = Math.round(Math.random() * (this.damageTypes.length - 1));
-  this.type = this.damageTypes[random];
-};
-Gauntlet.SpellBook.FireStream.prototype = new Gauntlet.SpellBook.Spell();
-
-module.exports = spells;
+// module.exports = Gauntlet;
