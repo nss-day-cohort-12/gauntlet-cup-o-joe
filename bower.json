@@ -1,0 +1,18 @@
+{
+  "name": "gauntlet-cup-o-joe",
+  "homepage": "https://github.com/nss-day-cohort-12/gauntlet-cup-o-joe",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
