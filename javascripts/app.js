@@ -1,3 +1,16 @@
+"use strict";
+
+const weapons = require("./weapons");
+const classes = require("./classes");
+const spells = require("./spells");
+const enemies = require("./enemies");
+const player = require("./player");
+
+let PlayerCreation = {
+    weapons, classes, spells, enemies, player
+};
+
+module.exports = PlayerCreation; 
 /*
   Test code to generate a human player and an orc player
  */

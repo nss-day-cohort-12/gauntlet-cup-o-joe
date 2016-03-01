@@ -58,3 +58,5 @@ var Weapon = function() {
       this.hands = 2;
     }
     Katana.prototype = new Weapon();
+
+    module.exports = weapons;

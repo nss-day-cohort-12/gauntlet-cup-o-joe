@@ -60,3 +60,5 @@ Gauntlet.Combatants.DarkMage = function() {
 };
 
 Gauntlet.Combatants.DarkMage.prototype = new Gauntlet.Combatants.Monster();
+
+module.exports = enemies;
