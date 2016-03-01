@@ -1,3 +1,5 @@
+"use strict";
+
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
@@ -90,3 +92,4 @@ Gauntlet.Combatants.Monster = function() {
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
 
+module.exports = player;

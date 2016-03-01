@@ -55,3 +55,5 @@ Gauntlet.SpellBook.FireStream = function() {
   this.type = this.damageTypes[random];
 };
 Gauntlet.SpellBook.FireStream.prototype = new Gauntlet.SpellBook.Spell();
+
+module.exports = spells;
