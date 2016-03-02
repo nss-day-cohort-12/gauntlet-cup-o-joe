@@ -1,6 +1,5 @@
 "use strict";
 
-let Gauntlet = Gauntlet || {};
 Gauntlet.Opponents = {};
 
 /*
