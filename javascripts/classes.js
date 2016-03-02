@@ -162,7 +162,7 @@ Gauntlet.GuildHall.Assassin = function() {
   this.strengthBonus = this.strengthBonus - 10;
   // this.speedBonus = this.intelligenceBonus + 10;
 };
-Gauntlet.GuildHall.Assasin.prototype = new Gauntlet.GuildHall.Stealth();
+Gauntlet.GuildHall.Assassin.prototype = new Gauntlet.GuildHall.Stealth();
 
 
 Gauntlet.GuildHall.Hunter = function() {

@@ -13,7 +13,8 @@ Gauntlet.Opponents.Monster = function() {
   this.strength = this.strength + 30;
 };
 
-Gauntlet.Opponents.Monster.prototype = new Gauntlet.Combatants.Player();
+Gauntlet.Opponents.Monster.prototype = new Gauntlet.Opponents.Monster();
+
 
 // ORC
 Gauntlet.Opponents.Orc = function() {
