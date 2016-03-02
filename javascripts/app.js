@@ -18,7 +18,7 @@ warrior.setWeapon(new WarAxe());
 warrior.generateClass();  // This will be used for "Surprise me" option
 console.log(warrior.toString());
 
-let orc = new Gauntlet.Combatants.Orc();
+let orc = new Gauntlet.Opponents.Orc();
 orc.generateClass();
 orc.setWeapon(new BroadSword());
 console.log(orc.toString());
