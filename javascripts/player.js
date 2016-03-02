@@ -3,7 +3,6 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-let Gauntlet = Gauntlet || {};
 Gauntlet.Combatants = {};
 
 /*

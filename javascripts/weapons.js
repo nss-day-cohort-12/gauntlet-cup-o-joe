@@ -1,6 +1,6 @@
 "use strict";
 
-let Gauntlet = Gauntlet || {};
+let Gauntlet = {};
 Gauntlet.Armory = {};
 
 // WEAPON PROTOTYPE CONSTRUCTOR
