@@ -15,6 +15,7 @@ Gauntlet.Opponents.Monster = function() {
 
 Gauntlet.Opponents.Monster.prototype = new Gauntlet.Opponents.Monster();
 
+
 // ORC
 Gauntlet.Opponents.Orc = function() {
   this.health = this.health + 20;
