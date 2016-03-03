@@ -45,19 +45,43 @@ Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
 
-Gauntlet.Combatants.Player.prototype.generateClass = function() {
-  // Get a random index from the allowed classes array
-  let random = Math.round(Math.random() * (this.allowedClasses.length - 1));
-
-  // Get the string at the index
-  let randomClass = this.allowedClasses[random];
-
+Gauntlet.Combatants.Player.prototype.setClass = function(className) {
   // Composes the corresponding player class into the player object
-  this.class = new Gauntlet.GuildHall[randomClass]();
+  this.class = new Gauntlet.GuildHall[className]();
 
   // Add the health bonus
   this.health += this.class.healthBonus;
+  this.strength += this.class.strengthBonus;
+  this.intelligence += this.class.intelligenceBonus;
   return this.class;
+};
+
+// Gauntlet.Combatants.Player.prototype.generateClass = function() {
+//   // Get a random index from the allowed classes array
+//   let random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+
+//   // Get the string at the index
+//   let randomClass = this.allowedClasses[random];
+
+//   // Composes the corresponding player class into the player object
+//   this.class = new Gauntlet.GuildHall[randomClass]();
+
+//   // Add the health bonus
+//   this.health += this.class.healthBonus;
+//   return this.class;
+// };
+
+Gauntlet.Combatants.Player.prototype.generateWeapon = function() {
+  // Get a random index from the allowed weapons array
+  let random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  let randomWeapon = this.allowedWeapons[random];
+
+  // Composes the corresponding weapon into the player object
+  this.weapon = new Gauntlet.Armory[randomWeapon]();
+
+  return this.weapon;
 };
 
 /*
@@ -74,7 +98,7 @@ Gauntlet.Combatants.Human = function() {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
-  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
+  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk", "Wizard", "Sorcerer", "Conjurer", "Shaman", "Thief", "Ninja", "Assassin", "Hunter"];
 };
 Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
