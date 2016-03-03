@@ -119,7 +119,7 @@ $(document).ready(function() {
                     break;
 
                   case "Dagger":
-                    newHuman.weapon = new Gauntlet.Armory.Gauntlet.Armory.Dagger();
+                    newHuman.weapon = new Gauntlet.Armory.Dagger();
                     break;
 
                   case "Katana":
@@ -150,19 +150,25 @@ $(document).ready(function() {
 
 var attackbutton = document.getElementById("attack-button");
 var domcrap = document.getElementById("display");
+var statsOutput = document.getElementById("playerOneInfo");
+
+var humanInfo;
+
+humanInfo += "<h2>Class: " + newHuman.class + "</h2>";
+
 
 
 attackbutton.addEventListener("click", function(){
     //Player1 attack
     newEnemy.health = newEnemy.health - newHuman.weapon.damage;
     domcrap.innerHTML= "";
-    domcrap.innerHTML += "Player 1 gashes Enemy for " + newHuman.weapon.damage + " damage. Enemy health is " + newEnemy.health;
+    domcrap.innerHTML += "<p>Player 1 gashes Enemy for " + newHuman.weapon.damage + " damage. Enemy health is " + newEnemy.health + "</p>";
 
     //Enemy Attack
     newHuman.health = newHuman.health - newEnemy.weapon.damage;
-    domcrap.innerHTML= "";
-    domcrap.innerHTML += "Player 1 gashes Enemy for " + newHuman.weapon.damage + " damage. Enemy health is " + newEnemy.health;
-    console.log(newEnemy.health, newHuman.health);
+    domcrap.innerHTML += "Enemy gashes Player1 for " + newEnemy.weapon.damage + " damage. Enemy health is " + newHuman.health;
+    console.log("newEnemy.health", newEnemy.health);
+    console.log("newHuman.health", newHuman.health);
     if (newEnemy.health<=0) {
         domcrap.innerHTML= "";
         domcrap.innerHTML= "Player1 wins";
@@ -171,7 +177,6 @@ attackbutton.addEventListener("click", function(){
     if (newHuman.health<=0) {
         domcrap.innerHTML= "";
         domcrap.innerHTML= "Computer wins";
-
 
     };
 
