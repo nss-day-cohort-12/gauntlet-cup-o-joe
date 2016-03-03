@@ -120,3 +120,14 @@ $(document).ready(function() {
 });
 
 // module.exports = PlayerCreation; 
+
+var attackbutton = document.getElementById("attack-button");
+
+attackbutton.addEventListener("click", function(){
+
+    console.log(newEnemy.health, newHuman.weapon.damage);
+})
+
+
+
+
