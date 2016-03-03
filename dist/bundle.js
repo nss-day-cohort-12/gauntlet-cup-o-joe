@@ -11,19 +11,23 @@
 //     weapons, classes, spells, enemies, player
 // };
 
-/*
-  Test code to generate a human player and an orc player
 
-    let warrior = new Gauntlet.Combatants.Human();
-    warrior.setWeapon(new Gauntlet.Armory.Weapon());
-    warrior.generateClass();  // This will be used for "Surprise me" option
-    console.log("warrior", warrior.toString());
+  // Test code to generate a human player and an orc player
 
-    let orc = new Gauntlet.Opponents.Orc();
-    orc.generateClass();
-    orc.setWeapon(new Gauntlet.Armory.Weapon());
-    console.log("orc", orc.toString());
-*/
+    // let warrior = new Gauntlet.Combatants.Human();
+    // warrior.setWeapon(new Gauntlet.Armory.Weapon());
+    // warrior.generateClass();  // This will be used for "Surprise me" option
+    // console.log("warrior", warrior.toString());
+
+    // let orc = new Gauntlet.Opponents.Orc();
+    // orc.generateClass();
+    // orc.setWeapon(new Gauntlet.Armory.BroadSword());
+    // console.log("orc", orc.toString());
+
+let newEnemy = new Gauntlet.Opponents.Orc();
+newEnemy.generateClass();
+newEnemy.setWeapon(new Gauntlet.Armory.BroadSword());
+console.log("newEnemy", newEnemy.toString());
 
 let playerOne = "";
 let input1 = document.getElementById("player-name");
@@ -35,10 +39,6 @@ let weaponSelection;
 let newHuman = new Gauntlet.Combatants.Human();
 console.log("newHuman", newHuman);
 
-// let newEnemy = new Gauntlet.Opponents.Monster();
-// newEnemy.generateClass();
-// newEnemy.generateWeapon();
-// console.log("newEnemy", newEnemy.toString());
 
 /*
   Test code to generate a spell
