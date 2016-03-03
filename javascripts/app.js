@@ -13,21 +13,50 @@
 /*
   Test code to generate a human player and an orc player
  */
-let warrior = new Gauntlet.Combatants.Human();
-warrior.setWeapon(new WarAxe());
-warrior.generateClass();  // This will be used for "Surprise me" option
-console.log(warrior.toString());
+// let warrior = new Gauntlet.Combatants.Human();
+// warrior.setWeapon(new WarAxe());
+// warrior.generateClass();  // This will be used for "Surprise me" option
+// console.log(warrior.toString());
 
-let orc = new Gauntlet.Opponents.Orc();
-orc.generateClass();
-orc.setWeapon(new BroadSword());
-console.log(orc.toString());
+// let orc = new Gauntlet.Opponents.Orc();
+// orc.generateClass();
+// orc.setWeapon(new BroadSword());
+// console.log(orc.toString());
 
-/*
-  Test code to generate a spell
- */
-let spell = new Gauntlet.SpellBook.Sphere();
-console.log("spell: ", spell.toString());
+// /*
+//   Test code to generate a spell
+//  */
+// let spell = new Gauntlet.SpellBook.Sphere();
+// console.log("spell: ", spell.toString());
+var playerOne= "";
+var input1= document.getElementById("player-name");
+var button1= document.getElementById("firstButton");
+
+button1.addEventListener ("click", function(){
+  playerOne = input1.value;
+  console.log("playerOne", playerOne);
+
+})
+input1.addEventListener ("keyup", function(event){
+  if (event.keyCode===13){
+  playerOne = input1.value;
+  console.log("playerOne", playerOne);
+  (playerOne)
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $(document).ready(function() {
