@@ -146,15 +146,40 @@ $(document).ready(function() {
 
 });
 
-// module.exports = PlayerCreation; 
+
 
 var attackbutton = document.getElementById("attack-button");
+var domcrap = document.getElementById("display");
+
 
 attackbutton.addEventListener("click", function(){
+    //Player1 attack
+    newEnemy.health = newEnemy.health - newHuman.weapon.damage;
+    domcrap.innerHTML= "";
+    domcrap.innerHTML += "Player 1 gashes Enemy for " + newHuman.weapon.damage + " damage. Enemy health is " + newEnemy.health;
 
-    console.log(newEnemy.health, newHuman.weapon.damage);
+    //Enemy Attack
+    newHuman.health = newHuman.health - newEnemy.weapon.damage;
+    domcrap.innerHTML= "";
+    domcrap.innerHTML += "Player 1 gashes Enemy for " + newHuman.weapon.damage + " damage. Enemy health is " + newEnemy.health;
+    console.log(newEnemy.health, newHuman.health);
+    if (newEnemy.health<=0) {
+        domcrap.innerHTML= "";
+        domcrap.innerHTML= "Player1 wins";
+
+    };
+    if (newHuman.health<=0) {
+        domcrap.innerHTML= "";
+        domcrap.innerHTML= "Computer wins";
+
+
+    };
+
 })
 
 
 
 
+
+
+// module.exports = PlayerCreation; 
