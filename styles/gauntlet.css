@@ -119,3 +119,7 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+#attack-button {
+  background-color: red;
+  margin-top: 100px
+}
