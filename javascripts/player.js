@@ -42,7 +42,11 @@ Gauntlet.Combatants.Player = function(name) {
 };
 
 Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
-  this.weapon = newWeapon;
+  this.weapon = newWeapon
+  this.name += this.weapon.name;
+  this.damage += this.weapon.damage;
+  this.hands += this.weapon.hands;
+  return this.weapon;
 }
 
 Gauntlet.Combatants.Player.prototype.setClass = function(className) {

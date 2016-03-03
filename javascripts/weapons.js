@@ -18,7 +18,7 @@ Gauntlet.Armory.Weapon = function() {
     // BROADSWORD
     Gauntlet.Armory.BroadSword = function() {
       this.name = "broad sword";
-      this.damage = 14;
+      this.damage = Math.floor(Math.random() * 14 + 10);
       this.hands = 2;
     };
     Gauntlet.Armory.BroadSword.prototype = new Gauntlet.Armory.Weapon();
@@ -26,7 +26,7 @@ Gauntlet.Armory.Weapon = function() {
     // WARAXE
     Gauntlet.Armory.WarAxe = function() {
       this.name = "war axe";
-      this.damage = 18;
+      this.damage = Math.floor(Math.random() * 18 + 10);
       this.hands = 2;
     };
     Gauntlet.Armory.WarAxe.prototype = new Gauntlet.Armory.Weapon();
@@ -34,7 +34,7 @@ Gauntlet.Armory.Weapon = function() {
     // CLAYMORE
     Gauntlet.Armory.Claymore = function() {
       this.name = "Claymore";
-      this.damage = 15;
+      this.damage = Math.floor(Math.random() * 15 + 10);
       this.hands = 2;
     }
     Gauntlet.Armory.Claymore.prototype = new Gauntlet.Armory.Weapon();
@@ -43,7 +43,7 @@ Gauntlet.Armory.Weapon = function() {
     // BOW AND ARROW
     Gauntlet.Armory.BowAndArrow = function() {
       this.name = "bow and arrow";
-      this.damage = 12;
+      this.damage = Math.floor(Math.random() * 12 + 10);
       this.hands = 2;
     }
     Gauntlet.Armory.BowAndArrow.prototype = new Gauntlet.Armory.Weapon();
@@ -51,7 +51,7 @@ Gauntlet.Armory.Weapon = function() {
     // DAGGER
     Gauntlet.Armory.Dagger = function() {
       this.name = "dagger";
-      this.damage = 4;
+      this.damage = Math.floor(Math.random() * 4 + 10);
       this.hands = 1;
     };
     Gauntlet.Armory.Dagger.prototype = new Gauntlet.Armory.Weapon();
@@ -59,7 +59,7 @@ Gauntlet.Armory.Weapon = function() {
     // KATANA
     Gauntlet.Armory.Katana = function() {
       this.name = "katana";
-      this.damage = 12;
+      this.damage = Math.floor(Math.random() * 12 + 10);
       this.hands = 2;
     }
     Gauntlet.Armory.Katana.prototype = new Gauntlet.Armory.Weapon();
