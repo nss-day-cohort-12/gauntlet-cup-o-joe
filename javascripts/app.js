@@ -50,7 +50,7 @@ console.log("spell: ", spell.toString());
 $(document).ready(function() {
   /*
     Show the initial view that accepts player name
-   */
+  */
   $("#player-setup").show();
 
   // Capture the user's input and save the name in a variable
@@ -64,6 +64,7 @@ $(document).ready(function() {
         if (event.keyCode === 13){
             playerOne = input1.value;
             console.log("playerOne", playerOne);
+          $("#adventurerName").html(playerOne);
         }
     });
 
@@ -99,6 +100,32 @@ $(document).ready(function() {
             case "card--battleground":
                 moveAlong = ($("#player-name").val() !== "");
                 newHuman.setWeapon(selectedWeapon);
+
+                switch (selectedWeapon) {
+                  case "BroadSword":
+                    newHuman.weapon = new Gauntlet.Armory.BroadSword();
+                    break;
+
+                  case "War Axe":
+                    newHuman.weapon = new Gauntlet.Armory.WarAxe();
+                    break;
+
+                  case "BroadSword":
+                    newHuman.weapon = new Gauntlet.Armory.Claymore();
+                    break;
+
+                  case "Bow and Arrow":
+                    newHuman.weapon = new Gauntlet.Armory.BowandArrow();
+                    break;
+
+                  case "Dagger":
+                    newHuman.weapon = new Gauntlet.Armory.Gauntlet.Armory.Dagger();
+                    break;
+
+                  case "Katana":
+                    newHuman.weapon = new Gauntlet.Armory.Katana;
+                    break;
+                }
                 break;
         }
 
