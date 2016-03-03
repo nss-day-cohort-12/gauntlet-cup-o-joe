@@ -32,6 +32,7 @@ Gauntlet.GuildHall.PlayerClass = function() {
 Gauntlet.GuildHall.Fighter = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
+  this.allowedWeapons = ["Broad Sword", "War Axe", "Claymore"];
 };
 Gauntlet.GuildHall.Fighter.prototype = new Gauntlet.GuildHall.PlayerClass();
 
@@ -134,6 +135,7 @@ Gauntlet.GuildHall.Stealth = function() {
   this.name = "Stealth";
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
+  this.allowedWeapons = ["Bow and Arrow", "Dagger", "Katana"];
   // this.speedBonus = this.intelligenceBonus + 20;
 };
 Gauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();

@@ -4,7 +4,7 @@ let Gauntlet = {};
 Gauntlet.Armory = {};
 
 // WEAPON PROTOTYPE CONSTRUCTOR
-let Weapon = function() {
+Gauntlet.Armory.Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
   this.hands = 2;
@@ -16,52 +16,52 @@ let Weapon = function() {
 
 // WARRIOR CLASS WEAPONS
     // BROADSWORD
-    let BroadSword = function() {
+    Gauntlet.Armory.BroadSword = function() {
       this.name = "broad sword";
       this.damage = 14;
       this.hands = 2;
     };
-    BroadSword.prototype = new Weapon();
+    Gauntlet.Armory.BroadSword.prototype = new Gauntlet.Armory.Weapon();
 
     // WARAXE
-    let WarAxe = function() {
+    Gauntlet.Armory.WarAxe = function() {
       this.name = "war axe";
       this.damage = 18;
       this.hands = 2;
     };
-    WarAxe.prototype = new Weapon();
+    Gauntlet.Armory.WarAxe.prototype = new Gauntlet.Armory.Weapon();
 
     // CLAYMORE
-    let Claymore = function() {
+    Gauntlet.Armory.Claymore = function() {
       this.name = "Claymore";
       this.damage = 15;
       this.hands = 2;
     }
-    Claymore.prototype = new Weapon();
+    Gauntlet.Armory.Claymore.prototype = new Gauntlet.Armory.Weapon();
 
 // STEALTH CLASS WEAPONS
     // BOW AND ARROW
-    var BowAndArrow = function() {
+    Gauntlet.Armory.BowAndArrow = function() {
       this.name = "bow and arrow";
       this.damage = 12;
       this.hands = 2;
     }
-    BowAndArrow.prototype = new Weapon();
+    Gauntlet.Armory.BowAndArrow.prototype = new Gauntlet.Armory.Weapon();
 
     // DAGGER
-    let Dagger = function() {
+    Gauntlet.Armory.Dagger = function() {
       this.name = "dagger";
       this.damage = 4;
       this.hands = 1;
     };
-    Dagger.prototype = new Weapon();
+    Gauntlet.Armory.Dagger.prototype = new Gauntlet.Armory.Weapon();
 
     // KATANA
-    let Katana = function() {
+    Gauntlet.Armory.Katana = function() {
       this.name = "katana";
       this.damage = 12;
       this.hands = 2;
     }
-    Katana.prototype = new Weapon();
+    Gauntlet.Armory.Katana.prototype = new Gauntlet.Armory.Weapon();
 
 // module.exports = WeaponsPage;

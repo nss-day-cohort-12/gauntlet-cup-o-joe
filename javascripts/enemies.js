@@ -20,7 +20,8 @@ Gauntlet.Opponents.Monster.prototype = new Gauntlet.Combatants.Player();
 Gauntlet.Opponents.Orc = function() {
   this.health = this.health + 20;
   this.species = "Orc";
-  this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
+  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
+  this.allowedWeapons = ["Broad Sword", "War Axe", "Claymore"];
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -33,6 +34,19 @@ Gauntlet.Opponents.Orc = function() {
     this.class = new Gauntlet.GuildHall[randomClass]();
     return this.class;
   }
+
+  this.generateWeapon = function() {
+  // Get a random index from the allowed weapons array
+  let random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  let randomWeapon = this.allowedWeapons[random];
+
+  // Composes the corresponding weapon into the player object
+  this.weapon = new Gauntlet.Armory[randomWeapon]();
+
+  return this.weapon;
+  };
 };
 
 Gauntlet.Opponents.Orc.prototype = new Gauntlet.Opponents.Monster();
@@ -41,7 +55,7 @@ Gauntlet.Opponents.Orc.prototype = new Gauntlet.Opponents.Monster();
 Gauntlet.Opponents.DarkElf = function() {
   this.health = this.health + 30;
   this.species = "Dark Elf";
-  // *** this.allowedClasses = ["Warrior", "Berserker", "Shaman"]; ***
+  this.allowedClasses = ["Assassin", "Thief", "Ninja", "Hunter"];
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -54,6 +68,19 @@ Gauntlet.Opponents.DarkElf = function() {
     this.class = new Gauntlet.GuildHall[randomClass]();
     return this.class;
   }
+
+  this.generateWeapon = function() {
+  // Get a random index from the allowed weapons array
+  let random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  let randomWeapon = this.allowedWeapons[random];
+
+  // Composes the corresponding weapon into the player object
+  this.weapon = new Gauntlet.Armory[randomWeapon]();
+
+  return this.weapon;
+  };
 };
 
 Gauntlet.Opponents.DarkElf.prototype = new Gauntlet.Opponents.Monster();
@@ -62,7 +89,8 @@ Gauntlet.Opponents.DarkElf.prototype = new Gauntlet.Opponents.Monster();
 Gauntlet.Opponents.DarkMage = function() {
   this.health = this.health + 20;
   this.species = "DarkMage";
-  // *** this.allowedClasses = ["Warrior", "Berserker", "Shaman"]; ***
+  this.allowedClasses = ["Shaman", "Wizard", "Conjurer", "Sorcerer"];
+  this.allowedWeapons = ["Bow and Arrow", "Dagger", "Katana"];
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -75,6 +103,19 @@ Gauntlet.Opponents.DarkMage = function() {
     this.class = new Gauntlet.GuildHall[randomClass]();
     return this.class;
   }
+
+  this.generateWeapon = function() {
+  // Get a random index from the allowed weapons array
+  let random = Math.round(Math.random() * (this.allowedWeapons.length - 1));
+
+  // Get the string at the index
+  let randomWeapon = this.allowedWeapons[random];
+
+  // Composes the corresponding weapon into the player object
+  this.weapon = new Gauntlet.Armory[randomWeapon]();
+
+  return this.weapon;
+  };
 };
 
 Gauntlet.Opponents.DarkMage.prototype = new Gauntlet.Opponents.Monster();
